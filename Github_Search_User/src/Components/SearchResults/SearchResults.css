@@ -1,0 +1,233 @@
+/* .search-results bileşeni */
+.search-results {
+  background-color: var(--component-background);  /* Arka plan rengi bileşen arka plan rengiyle uyumlu */
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);   /* Kutu gölgesi efekti */
+  border-radius: 15px;  /* Köşeleri yuvarlar */
+  padding: 2rem 1.5rem; /* İçeriği kenarlardan içeriye doğru içeri alır */
+  display: grid;  /* Grid layout kullanır */
+  grid-template-columns: repeat(4, 1fr);  /* 4 sütunlu grid oluşturur */
+  gap: 1.5rem 0;  /* Satır ve sütunlar arasında boşluk bırakır */
+}
+
+/* .profile-img-container bileşeni */
+.profile-img-container {
+  grid-column: 1 / 2; /* Griddeki sütun numarasını belirler */
+}
+
+/* .profile-img bileşeni */
+.profile-img {
+  display: block; /* Blok düzeninde gösterir */
+  width: 70px;  /* Genişlik */
+  height: 70px; /* Yükseklik */
+  border-radius: 50%; /* Yuvarlak kenarlar oluşturur */
+}
+
+/* .title-info bileşeni */
+.title-info {
+  grid-column: 2 / 5; /* Griddeki sütun numarasını belirler */
+  display: flex;  /* Flex düzeni kullanır */
+  flex-direction: column;   /* Dikey yönde düzenler */
+  justify-content: center;  /* İçeriği dikey yönde ortalar */
+  align-items: flex-start;  /* İçeriği yatay yönde başa hizalar */
+  padding-left: 1rem; /* Sol kenardan içeriye dolgular ekler */
+  /* margin-bottom: 33px; */
+}
+
+/* .title-info h1 bileşeni */
+.title-info h1 {
+  font-size: 1rem;    /* Font büyüklüğü */
+  margin-bottom: 0.5rem;    /* Alt boşluk */
+}
+
+/* .title-info a bileşeni */
+.title-info a { 
+  text-decoration: none;  /* Metin altı çizgisini kaldırır */
+  color: var(--button);   /* Metin rengi */
+}
+
+/* .title-info h3 bileşeni */
+.title-info h3 {
+  margin-bottom: 0.5rem;  /* Alt boşluk */
+}
+
+/* .title-info a:hover bileşeni */
+.title-info a:hover {
+  text-decoration: underline;   /* Metin üzerine gelindiğinde altı çizgi ekler */
+}
+
+/* .title-info a:enabled bileşeni */
+.title-info a:enabled {
+  color: var(--button); /* Metin rengi */
+}
+
+/* .bio bileşeni */
+.bio {
+  grid-column: 1/5; /* Griddeki sütun numarasını belirler */
+}
+
+/* .repo-info bileşeni */
+.repo-info {
+  grid-column: 1/5; /* Griddeki sütun numarasını belirler */
+  background-color: var(--body-background); /* Arka plan rengi */
+  text-align: center; /* Metin hizalaması */
+  padding: 1rem; /* İç dolgu */
+  border-radius: 10px; /* Köşeleri yuvarlar */
+}
+
+/* .repo-info tr:first-of-type bileşeni */
+.repo-info tr:first-of-type {
+  font-size: 11px; /* Font büyüklüğü */
+}
+
+/* .repo-info > thead td bileşeni */
+.repo-info > thead td {
+  padding-bottom: 0.5rem; /* Alt boşluk */
+  font-weight: 400; /* Yazı kalınlığı */
+}
+
+/* .repo-info > tbody td bileşeni */
+.repo-info > tbody td {
+  font-size: 16px; /* Font büyüklüğü */
+  font-weight: 700; /* Yazı kalınlığı */
+}
+
+/* .contact-info bileşeni */
+.contact-info {
+  grid-column: 1/5; /* Griddeki sütun numarasını belirler */
+  list-style-type: none; /* Liste işaretini kaldırır */
+  display: flex; /* Flex düzeni kullanır */
+  flex-direction: column; /* Dikey yönde düzenler */
+  gap: 0.7rem; /* Öğeler arası boşluk */
+}
+
+/* .contact-info li bileşeni */
+.contact-info li {
+  display: flex; /* Flex düzeni kullanır */
+  align-items: center; /* Öğeleri dikey yönde hizalar */
+}
+
+/* .contact-info img bileşeni */
+.contact-info img {
+  display: inline; /* İnline düzeni kullanır */
+  margin-right: 1rem; /* Sağ kenardan boşluk */
+}
+
+/* .contact-info li:first-child > img bileşeni */
+.contact-info li:first-child > img {
+  display: inline; /* İnline düzeni kullanır */
+  margin-right: calc(1rem + 4px); /* Sağ kenardan boşluk */
+}
+
+/* .contact-info li a bileşeni */
+.contact-info li a {
+  text-decoration: none; /* Metin altı çizgisini kaldırır */
+  color: inherit; /* Miras alınan renk */
+}
+
+/* .contact-info li a:hover bileşeni */
+.contact-info li a:hover {
+  text-decoration: underline; /* Metin üzerine gelindiğinde altı çizgi ekler */
+}
+
+/* .not-avail bileşeni */
+.not-avail {
+  color: gray; /* Metin rengi */
+}
+
+/* @media (min-width: 500px) */
+@media (min-width: 500px) {
+  /* .search-results bileşeni */
+  .search-results {
+    padding: 52px 3rem; /* İç dolguları ayarlar */
+    gap: 2rem; /* Öğeler arası boşluk */
+  }
+
+  /* .profile-img-container bileşeni */
+  .profile-img-container {
+    justify-self: left; /* Yatayda sola hizalar */
+    align-self: start; /* Dikeyde yukarı hizalar */
+  }
+
+  /* .profile-img bileşeni */
+  .profile-img {
+    height: 117px; /* Yükseklik */
+    width: 117px; /* Genişlik */
+  }
+
+  /* .title-info h1 bileşeni */
+  .title-info h1 {
+    font-size: 1.625rem; /* Font büyüklüğü */
+    line-height: 39px; /* Satır yüksekliği */
+  }
+
+  /* .repo-info bileşeni */
+  .repo-info {
+    text-align: left; /* Metin hizalaması */
+  }
+
+  /* .repo-info td bileşeni */
+  .repo-info td {
+    width: 100px; /* Genişlik */
+  }
+
+  /* .contact-info bileşeni */
+  .contact-info {
+    flex-direction: row; /* Yatay yönde düzenler */
+    flex-wrap: wrap; /* Öğeleri sardırır */
+  }
+
+  /* .contact-info li bileşeni */
+  .contact-info li {
+    flex-basis: 45%; /* İçerik genişliği */
+  }
+}
+
+/* @media (min-width: 768px) */
+@media (min-width: 768px) {
+  /* .search-results bileşeni */
+  .search-results {
+    gap: 0; /* Öğeler arası boşluk */
+  }
+
+  /* .profile-img-container bileşeni */
+  .profile-img-container {
+    grid-row: 1/3; /* Griddeki satır numarasını belirler */
+  }
+
+  /* .repo-info, .bio, .contact-info bileşenleri */
+  .repo-info, .bio, .contact-info {
+    grid-column: 2/5; /* Griddeki sütun numarasını belirler */
+    gap: 1rem; /* Öğeler arası boşluk */
+  }
+
+  /* .repo-info, .bio bileşenleri */
+  .repo-info, .bio {
+    margin-bottom: 2rem; /* Alt boşluk */
+  }
+
+  /* .title-info bileşeni */
+  .title-info {
+    padding-left: 0; /* Sol kenardan içeriye dolguları kaldırır */
+    display: grid; /* Grid düzeni kullanır */
+    grid-template-columns: 1fr 1fr; /* İki sütunlu grid oluşturur */
+    grid-template-rows: 1fr 1fr; /* İki satırlı grid oluşturur */
+  }
+
+  /* .title-info > h1 bileşeni */
+  .title-info > h1 {
+    grid-column: 1/2; /* Griddeki sütun numarasını belirler */
+  }
+
+  /* .title-info > h3 bileşeni */
+  .title-info > h3 {
+    grid-column: 1/2; /* Griddeki sütun numarasını belirler */
+  }
+
+  /* .title-info > .created-at-date bileşeni */
+  .title-info > .created-at-date {
+    grid-column: 2/3; /* Griddeki sütun numarasını belirler */
+    grid-row: 1/2; /* Griddeki satır numarasını belirler */
+    justify-self: flex-end; /* Yatayda sağa hizalar */
+    align-self: center; /* Dikeyde ortalar */
+  }
+}

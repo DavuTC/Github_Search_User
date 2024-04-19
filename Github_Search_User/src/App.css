@@ -1,0 +1,84 @@
+/* resets */
+html {
+  box-sizing: border-box;  /* Tüm elementlerin kutu modelini sınırlar içine alır */
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;  /* Tüm elementlerin kutu modelini kalıtımla alır */
+  margin: 0;  /* Tüm elementlerin dış boşluklarını sıfırlar */
+  padding: 0; /* Tüm elementlerin iç boşluklarını sıfırlar */
+}
+
+/* variables */
+:root {
+  --button: #0079ff;  /* Buton rengini belirler */
+
+  /* lightMode */
+  --body-background: #f6f8ff;  /* Arka plan rengini belirler */
+  --component-background: #fefefe;  /* Bileşen arka plan rengini belirler */
+  --text-primary: #2b3442;  /* Birincil metin rengini belirler */
+  --text-secondary: #4b6a9b;  /* İkincil metin rengini belirler */
+  -text-not-available: #4b6a9b;  /* Mevcut olmayan metin rengini belirler */
+}
+
+[data-theme='dark'] {
+  --body-background: #141d2f;  /* Koyu tema arka plan rengini belirler */
+  --component-background: #1e2a47;  /* Koyu tema bileşen arka plan rengini belirler */
+  --text-primary: #ffffff;  /* Koyu tema birincil metin rengini belirler */
+  --text-secondary: #ffffff;  /* Koyu tema ikincil metin rengini belirler */
+}
+
+/* global styles */
+img {
+  display: block;  /* Tüm resimleri blok öğesi olarak görüntüler */
+}
+
+.body {
+  background: var(--body-background);  /* Arka plan rengini belirler */
+  color: var(--text-primary);  /* Metin rengini belirler */
+  font-family: 'Space Mono', monospace;  /* Yazı tipini belirler */
+  display: flex;  /* İçeriği yatay olarak düzenler */
+  align-items: center;  /* İçeriği dikeyde ortalar */
+  justify-content: center;  /* İçeriği yatayda ortalar */
+  min-height: 100vh;  /* En az pencere yüksekliği kadar uzunluk belirler */
+  margin: 0 auto;  /* Kenar boşluklarını ayarlar */
+  transition: all 0.5s;  /* Tüm geçiş efektlerini ayarlar */
+  font-size: 13px;  /* Metin boyutunu belirler */
+  padding: 2rem 0;  /* Dolgu boşluklarını ayarlar */
+}
+
+.app-container {
+  color: var(--text-primary);  /* Metin rengini belirler */
+  min-width: 250px;  /* En az genişlik belirler */
+  max-width: 730px;  /* En fazla genişlik belirler */
+  margin: 0 1.5rem;  /* Kenar boşluklarını ayarlar */
+  transition: all 0.5s;  /* Tüm geçiş efektlerini ayarlar */
+}
+
+.invalid-user-message h1 {
+  padding: 3rem 1.5rem;  /* Dolgu boşluklarını ayarlar */
+  font-size: 1rem;  /* Metin boyutunu belirler */
+  text-align: center;  /* Metni ortalar */
+}
+
+@media (min-width: 500px) {
+  .body {
+    justify-content: center;  /* İçeriği yatayda ortalar */
+    padding-top: 2rem;  /* Üst dolgu boşluğunu ayarlar */
+    overflow-y: scroll;  /* Dikey taşmayı ayarlar */
+  }
+}
+
+@media (min-width: 768px) {
+  .body {
+    padding-top: 4rem 0;  /* Üst dolgu boşluğunu ayarlar */
+  }
+  .app-container {
+    margin: 0;  /* Kenar boşluklarını ayarlar */
+  }
+  .invalid-user-message h1 {
+    font-size: 1.6rem;  /* Metin boyutunu belirler */
+    text-align: center;  /* Metni ortalar */
+  }
+}
